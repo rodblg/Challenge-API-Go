@@ -12,6 +12,7 @@ import (
 )
 
 func DBinstance() *mongo.Client {
+	
 	MongoDB := os.Getenv("MONGO_URI")
 	if MongoDB == "" {
 		MongoDB = "mongodb://localhost:27017"

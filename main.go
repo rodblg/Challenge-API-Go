@@ -2,7 +2,8 @@ package main
 
 import (
 	"os"
-
+	"github.com/joho/godotenv"
+	"log"
 	"github.com/gin-gonic/gin"
 	middleware "github.com/rodblg/Challenge-API-Go/middleware"
 	routes "github.com/rodblg/Challenge-API-Go/routes"
@@ -10,6 +11,10 @@ import (
 
 func main() {
 
+	err := godotenv.Load(".env")
+	if err != nil {
+    	log.Fatal(err)
+    }
 	port := os.Getenv("PORT")
 
 	if port == "" {
