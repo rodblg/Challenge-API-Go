@@ -20,7 +20,7 @@ It allows you to create a new account for an user, log in with your credentials,
 2. Generate the .env file with all your personal credentials
 3. You can run the gin API project inside the root directory with: `go run main.go`
 
-Inside your .env file you will have to generate your env variables like this:
+Inside your .env file you will have to generate your env variables like this and save it in the root directory:
 ```
 Sender="email@gmail.com"
 Password="email credentials"
