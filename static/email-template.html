@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact details</title>
+</head>
+<body>
+	<h1>Bank Statement</h1>
+	<p>Dear User, here you have your latest movements:</p>
+		
+		{{range .}}
+		<p>Name: {{.Name}}, Value: {{.Value}}</p>
+		{{end}}
+    
+	<p>Thank you and have a great day!</p>
+</body>
+</html>
