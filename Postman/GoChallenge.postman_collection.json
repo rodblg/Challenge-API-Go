@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "965d47c1-f170-4128-87fb-3ee78f6b6386",
+		"name": "GoChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"username\",\r\n    \"email\":\"useremail@gmail.com\",\r\n    \"password\":\"password123\",\r\n    \"phone\":\"559921032221\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\":\"useremail@gmail.com\",\r\n \"password\":\"password123\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InJvZHJpZ29ibGFuY2FzMTlAZ21haWwuY29tIiwiRmlyc3RfbmFtZSI6IlJvZHJpZ28iLCJVaWQiOiI2NDVhYzhjMzMyYTVlZmFjZjI5YWMxNjUiLCJleHAiOjE2ODM3NTc2MzV9.LdEqCAa2QNti-T9PpAzDBJgGplAN0pAGnbCdLErb-nc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InJvZHJpZ29ibGFuY2FzMjRAZ21haWwuY29tIiwiRmlyc3RfbmFtZSI6IlJvZHJpZ28iLCJVaWQiOiI2NDc2N2JhOTY5ODE2OWZmZmRkNjcxYzYiLCJleHAiOjE2ODU1NzI5MDV9.7re0lCICGtc0jxVCPPVzB5RuP3KEx-dRquXV-eKzQJU",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 5000.00,\r\n    \"name_movement\":\"deposito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InJvZHJpZ29ibGFuY2FzMjRAZ21haWwuY29tIiwiRmlyc3RfbmFtZSI6IlJvZHJpZ28iLCJVaWQiOiI2NDc2N2JhOTY5ODE2OWZmZmRkNjcxYzYiLCJleHAiOjE2ODU1NzI5MDV9.7re0lCICGtc0jxVCPPVzB5RuP3KEx-dRquXV-eKzQJU",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InJvZHJpZ29ibGFuY2FzMjRAZ21haWwuY29tIiwiRmlyc3RfbmFtZSI6IlJvZHJpZ28iLCJVaWQiOiI2NDc2N2JhOTY5ODE2OWZmZmRkNjcxYzYiLCJleHAiOjE2ODU1NzI5MDV9.7re0lCICGtc0jxVCPPVzB5RuP3KEx-dRquXV-eKzQJU",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/users/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Statement",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InJvZHJpZ29ibGFuY2FzMjRAZ21haWwuY29tIiwiRmlyc3RfbmFtZSI6IlJvZHJpZ28iLCJVaWQiOiI2NDc2N2JhOTY5ODE2OWZmZmRkNjcxYzYiLCJleHAiOjE2ODU1NzI5MDV9.7re0lCICGtc0jxVCPPVzB5RuP3KEx-dRquXV-eKzQJU",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/users/statement",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"statement"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
