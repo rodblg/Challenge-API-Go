@@ -2,7 +2,7 @@
 
 # Gin and mongo API Bank App
 
-This project replicates my repository of "Challenge-API" but insted of using python, fastAPI and PostgreSQL, here I implement an API with Go, gin and mongo as database. 
+This project replicates my repository of "Challenge-API" https://github.com/rodblg/Challenge-API but insted of using python, fastAPI and PostgreSQL, here I implement an API with Go, gin and mongo as database. 
 It allows you to create a new account for an user, log in with your credentials, make transactions, see all your movements inside the "app" and then send a report by email with your latests movements.
 
 ## Features
@@ -17,11 +17,11 @@ It allows you to create a new account for an user, log in with your credentials,
 
 ## Installation and Configuration Instructions
 1. Clone the github repository
-2. Run the gin API inside the root directory: `go run main.go`
+2. You can run the gin API project inside the root directory with: `go run main.go`
 
 ## Path Operations
 
-This project has several 6 path operations for both user and transactions handler functions:
+This project has 6 path operations for both users and transactions:
 
 
 - /users/signup: This endpoint allows you to create new user accounts. Requires a JSON object as an input. The format for the object is as follows: 
@@ -68,5 +68,5 @@ After signup as an user, login, make some transaction movements you will get a s
 You can use the postman collection to make new requests into the API following this steps:
 1. Download file inside Postman folder.
 2. Import it into your workspace.
-3. To use and test the collection use  `http://127.0.0.1:8000/{path_operation}`.
+3. To run and test the collection use the following URI structure  `http://127.0.0.1:8000/{path_operation}`.
 
