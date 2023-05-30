@@ -17,7 +17,19 @@ It allows you to create a new account for an user, log in with your credentials,
 
 ## Installation and Configuration Instructions
 1. Clone the github repository
-2. You can run the gin API project inside the root directory with: `go run main.go`
+2. Generate the .env file with all your personal credentials
+3. You can run the gin API project inside the root directory with: `go run main.go`
+
+Inside your .env file you will have to generate your env variables like this:
+```
+Sender="email@gmail.com"
+Password="email credentials"
+SMTPHost="smtp.gmail.com"
+SMTPPort=465
+MONGO_URI=mongodb://localhost:27017
+PORT="8000"
+
+```
 
 ## Path Operations
 
