@@ -15,7 +15,7 @@ func DBinstance() *mongo.Client {
 	
 	MongoDB := os.Getenv("MONGO_URI")
 	if MongoDB == "" {
-		MongoDB = "mongodb://localhost:27017"
+		MongoDB = "mongodb://admin:password@mongodb"
 	}
 
 	fmt.Print(MongoDB)
